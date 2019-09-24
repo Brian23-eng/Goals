@@ -4,7 +4,7 @@
     <li> {{ goal.name}}
         <br>
         <button (click)='toggleDetails(i)'>Toogle</button>
-        <app-goal-detail *ngIf='goal.showDescription' [goal]='goal'></app-goal-detail>
+        <app-goal-detail (isComplete)='completeGoal($event,i)' *ngIf='goal.showDescription' [goal]='goal'></app-goal-detail>
     </li>
 
 </ul>
